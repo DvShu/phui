@@ -99,18 +99,3 @@ export default {
   }
 }
 </script>
-
-<style lang="stylus">
-  .ph-carousel
-    overflow-x hidden
-    position relative
-  .ph-carousel-item
-    position absolute
-    width: 100%;
-    height 100%
-    transform translateX(0)
-    display none
-  .ph-carousel-active
-    display block
-    transform none
-</style>

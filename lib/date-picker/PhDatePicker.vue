@@ -61,24 +61,3 @@ export default {
   }
 }
 </script>
-
-<style lang="stylus">
-  .ph-date-picker
-    display inline-block
-    box-sizing border-box
-    width 150px
-    height 35px
-    line-height @height
-    border 1px solid grey
-    border-radius 3px
-    position relative
-    vertical-align middle
-    padding 0 5px
-    font-size 14px
-    white-space: nowrap
-    overflow: hidden
-    text-overflow: ellipsis
-    input
-      position absolute
-      left -9999px
-</style>
