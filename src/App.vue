@@ -97,6 +97,7 @@ export default {
     text-align: center;
     background-color: rgba(0,0,0,.7);
     color: #fff;
+    z-index 100
   pre
     padding: 10px;
     box-sizing: border-box;

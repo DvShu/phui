@@ -25,7 +25,7 @@ export default {
   name: 'PhDatePicker',
   props: {
     value: { // 实际显示的日期字符串
-      type: String,
+      type: Date,
       default: ''
     },
     valueFormat: { // 日期显示的格式
@@ -33,7 +33,7 @@ export default {
       default: 'yyyy-mm-dd'
     },
     defaultValue: { // 初始化的日期, 能够被 parse 的日期, 可以是 String, Date
-      type: Object,
+      type: [Date, String, Number],
       default: undefined
     }
   },

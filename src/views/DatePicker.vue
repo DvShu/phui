@@ -19,37 +19,45 @@
     </show-code>
     <br />
     <div class="note">
-      备注说明：这个组件是基于 <code>input-type</code> 属性实现的，这个属性在移动端的浏览器上效果最佳，所以建议用手机打开这个页面查看具体的效果。
+      备注说明：
+      <ol>
+        <li>1. 这个组件是基于 <code>input-type</code> 属性实现的，这个属性在移动端的浏览器上效果最佳，所以建议用手机打开这个页面查看具体的效果</li>
+        <li>2. 每个手机、每个浏览器对于 <code>input-type</code> 的实现不一样，所以在不同的浏览器上表现形式不一样</li>
+        <li>3. 有的浏览器有实现清楚功能，点击清楚后，组件的日期将会重置为当前日期</li>
+      </ol>
     </div>
     <h3>API</h3>
     <h4>DatePicker Props</h4>
-    <ph-table>
-      <template v-slot:head>
-        <th>属性</th>
-        <th>类型</th>
-        <th>说明</th>
-        <th>默认值</th>
-        <th>备注</th>
-      </template>
-      <template>
-        <tr>
-          <td>value-format</td>
-          <td>String</td>
-          <td>日期显示的格式</td>
-          <td>yyyy-mm-dd</td>
-          <td>
-            yyyy - 年、yy - 年份的后两位、mm - 月, 如果不足两位数, 前置补0、m - 月、dd&nbsp;|&nbsp;d - 日期、H&nbsp;|&nbsp;HH - 小时[24小时制]、M&nbsp;|&nbsp;MM - 分钟、s&nbsp;|&nbsp;ss - 秒
-          </td>
-        </tr>
-        <tr>
-          <td>default-value</td>
-          <td>String|Date|Number</td>
-          <td>默认时间</td>
-          <td>-</td>
-          <td>如果没有传该属性，则组件将会以 <code>v-model</code> 绑定的组件值作为初始值；如果两个同时设置，则默认值的优先级以这个属性为准。组件的实际默认值顺序优先级：<code>default-value</code>&nbsp;&gt;&nbsp;<code>v-model</code>&nbsp;&gt;&nbsp;<code>new Date()</code></td>
-        </tr>
-      </template>
-    </ph-table>
+    <div class="table-panel">
+      <ph-table class="date-table">
+        <template v-slot:head>
+          <th>属性</th>
+          <th>类型</th>
+          <th>说明</th>
+          <th>默认值</th>
+          <th>备注</th>
+        </template>
+        <template>
+          <tr>
+            <td>value-format</td>
+            <td>String</td>
+            <td>日期显示的格式</td>
+            <td>yyyy-mm-dd</td>
+            <td>
+              yyyy - 年、yy - 年份的后两位、mm - 月, 如果不足两位数, 前置补0、m - 月、dd&nbsp;|&nbsp;d - 日期、H&nbsp;|&nbsp;HH - 小时[24小时制]、M&nbsp;|&nbsp;MM - 分钟、s&nbsp;|&nbsp;ss - 秒
+            </td>
+          </tr>
+          <tr>
+            <td>default-value</td>
+            <td>String|Date|Number</td>
+            <td>默认时间</td>
+            <td>-</td>
+            <td>如果没有传该属性，则组件将会以 <code>v-model</code> 绑定的组件值作为初始值；如果两个同时设置，则默认值的优先级以这个属性为准。组件的实际默认值顺序优先级：<code>default-value</code>&nbsp;&gt;&nbsp;<code>v-model</code>&nbsp;&gt;&nbsp;<code>new Date()</code></td>
+          </tr>
+        </template>
+      </ph-table>
+    </div>
+
   </div>
 </template>
 

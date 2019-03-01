@@ -47,9 +47,9 @@
     <pre><code class="lang-javascript">yarn add phui babel-plugin-component</code></pre>
     <h3>配置按需引入</h3>
     <p>修改 <code>babel.config.js</code> ，添加 <code>plugins</code> </p>
-    <ph-code>[<br/><br/>&nbsp;&nbsp;'component',<br/><br/>&nbsp;&nbsp;{<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;'libraryName':&nbsp;'phui',<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;'styleLibraryName':&nbsp;'theme-default'<br/><br/>&nbsp;&nbsp;}<br/><br/>]</ph-code>
+    <ph-code>[<br/>  'component',<br/>  {<br/>    'libraryName': 'phui',<br/>    'styleLibraryName': 'theme-default'<br/>  }<br/>]</ph-code>
     <p>修改后的 <code>babel.config.js</code> 的完整的代码是类似于下面这样的：</p>
-    <ph-code>module.exports&nbsp;=&nbsp;{<br/><br/>&nbsp;&nbsp;presets:&nbsp;[<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;'@vue/app'<br/><br/>&nbsp;&nbsp;],<br/><br/>&nbsp;&nbsp;plugins:&nbsp;[<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;[<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'component',<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'libraryName':&nbsp;'phui',<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'styleLibraryName':&nbsp;'theme-default'<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;]<br/><br/>&nbsp;&nbsp;]<br/><br/>}</ph-code>
+    <ph-code>module.exports = {<br/>  presets: [<br/>    '@vue/app'<br/>  ],<br/>  plugins: [<br/>    [<br/>      'component',<br/>      {<br/>        'libraryName': 'phui',<br/>        'styleLibraryName': 'theme-default'<br/>      }<br/>    ]<br/>  ]<br/>}</ph-code>
   </div>
 </template>
 

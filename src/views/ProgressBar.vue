@@ -4,11 +4,11 @@
     <h4>1. <code>Vue</code> 是通过全局 <code>&lt;script&gt;</code> 的方式引入，例如：</h4>
     <ph-code>&lt;script src="https://cdn.staticfile.org/vue/2.6.7/vue.min.js"&gt;&lt;/script&gt;</ph-code>
     <p>在 <code>main.js</code>中添加以下代码：</p>
-    <ph-code>import&nbsp;{&nbsp;ProgressBar2&nbsp;}&nbsp;from&nbsp;'phui'<br/><br/>Vue.use(ProgressBar2);</ph-code>
+    <ph-code>import { ProgressBar2 } from 'phui'<br/><br/>Vue.use(ProgressBar2);</ph-code>
     <h4>2. <code>Vue</code> 是通过 ES Module 的方式引入，例如：</h4>
-    <ph-code>import&nbsp;Vue&nbsp;from&nbsp;'vue'</ph-code>
+    <ph-code>import Vue from 'vue'</ph-code>
     <p>在 <code>main.js</code>中添加以下代码：</p>
-    <ph-code>import&nbsp;{&nbsp;ProgressBar&nbsp;}&nbsp;from&nbsp;'phui'<br/><br/>Vue.use(ProgressBar);</ph-code>
+    <ph-code>import { ProgressBar } from 'phui'<br/><br/>Vue.use(ProgressBar);</ph-code>
     <h3>代码演示</h3>
     <show-code>
       <template>
