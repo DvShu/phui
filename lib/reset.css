@@ -1,0 +1,24 @@
+/** 初始化 **/
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,input,button,textarea,p,blockquote,th,td,form,pre{margin: 0; padding: 0; -webkit-tap-highlight-color:rgba(0,0,0,0);}
+a:active,a:hover{outline:0}
+img{display: inline-block; border: none; vertical-align: middle;}
+li{list-style:none;}
+table{border-collapse: collapse; border-spacing: 0;}
+h1,h2,h3{font-weight: 400;line-height: 1.5}
+h4, h5, h6{font-size: 100%; font-weight: 400;line-height: 1.5}
+p{padding: 7px 0}
+button,input,select,textarea{font-size: 100%; }
+input,button,textarea,select,optgroup,option{font-family: inherit; font-size: inherit; font-style: inherit; font-weight: inherit;vertical-align: middle}
+pre{white-space: pre-wrap; word-wrap: break-word;font-family: Courier New;}
+div{box-sizing: border-box;}
+
+
+/** 初始化全局标签 **/
+body{line-height: 24px; font: 14px 'PingFang SC', Helvetica, 'STHeiti STXihei', 'Microsoft YaHei', Tohoma, Arial, sans-serif;}
+hr{height: 1px; margin: 10px 0; border: 0; clear: both;}
+a{color: #455a64; text-decoration:none; }
+a:hover{color: #1E9FFF;}
+a cite{font-style: normal;}
+html, body {
+  height: 100%;
+}

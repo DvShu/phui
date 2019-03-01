@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <!-- IE 浏览器运行最新渲染模式(win10, IE 10) -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- 浏览器运行高速模式, 针对国内所谓的双核浏览器 -->
+  <meta name="renderer" content="webkit">
+  <!-- 兼容移动设备 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <link rel="shortcut icon" href="http://oyogbl12f.bkt.clouddn.com/favicon.ico" type="image/x-icon">
+  <title>Title</title>
+  <style>
+    html,body{
+      height: 100%;margin:0;padding:0;
+    }
+    .app{
+      display:flex;height:100%;flex-flow: column nowrap;
+    }
+    #editor{
+      flex-grow:1;border:1px solid #dedede;height: 50%;
+    }
+    .button-panel{
+      padding:20px 0;text-align:center;
+    }
+    .result-panel{
+      flex-grow:1;border:1px solid #dedede;height: 50%;white-space: pre-wrap;
+    }
+  </style>
+</head>
+<body>
+<div class="app">
+  <div id="editor"></div>
+  <div class="button-panel">
+    <button class="btn">解析</button>
+  </div>
+  <div class="result-panel">
+  </div>
+</div>
+<script src="https://cdn.staticfile.org/ace/1.4.3/ace.js"></script>
+<script>
+  function $ (s) {
+    return document.querySelectorAll(s);
+  }
+
+  var editor = ace.edit('editor');
+  editor.setFontSize(14);
+  editor.session.setTabSize(2)
+
+  $('.btn')[0].addEventListener('click', function () {
+    var value = editor.getValue()
+    value = value.replace(/&/g, '&amp;')
+    value = value.replace(/</g, '&lt;')
+    value = value.replace(/>/g, '&gt;')
+    value = value.replace(/[\r\n]/g, '<br/>') // 换行
+    $r.textContent = value
+  })
+
+  var $r = $('.result-panel')[0];
+</script>
+</body>
+</html>

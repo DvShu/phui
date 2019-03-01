@@ -1,18 +1,81 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div>
+    <p class="title">phui</p>
+    <div class="sub-title">
+      <span>收集整理一些小巧的平时工作中的 <code>Vue</code> 组件，大部分都是移动端组件。对于一些比较大的组件，推荐使用其余组件库，比如：</span>
+      <a
+        href="http://element-cn.eleme.io/#/zh-CN"
+        title="Element-ui"
+        class="home-a"
+      >
+        Element-ui
+      </a>
+      <span>、</span>
+      <a
+        href="https://www.iviewui.com/"
+        title="iView"
+        class="home-a"
+      >
+        iView
+      </a>
+      <span>、</span>
+      <a
+        href="https://youzan.github.io/vant/#/zh-CN/intro"
+        title="vant"
+        class="home-a"
+      >
+        Vant
+      </a>
+      <span>、</span>
+      <a
+        href="https://didi.github.io/mand-mobile/#/zh-CN/home"
+        title="mand-mobile"
+        class="home-a"
+      >
+        mand-mobile
+      </a>
+    </div>
+    <div class="note">
+      备注说明：
+      <ol>
+        <li>&emsp;1.&nbsp;当前功能都只是平时需要的功能，没有做更多的扩展，后续需要会根据需求进行相应的扩展。</li>
+        <li>&emsp;2.&nbsp;所有的代码都是没有经过 <code>babel</code> 编译的，需要在最终 <code>build</code> 的时候进行统一编译。</li>
+        <li>&emsp;3.&nbsp;需要借助 <code>babel-plugin-component</code> 实现按需引入。</li>
+      </ol>
+    </div>
+    <h3>安装</h3>
+    <pre><code class="lang-javascript">yarn add phui babel-plugin-component</code></pre>
+    <h3>配置按需引入</h3>
+    <p>修改 <code>babel.config.js</code> ，添加 <code>plugins</code> </p>
+    <ph-code>[<br/><br/>&nbsp;&nbsp;'component',<br/><br/>&nbsp;&nbsp;{<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;'libraryName':&nbsp;'phui',<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;'styleLibraryName':&nbsp;'theme-default'<br/><br/>&nbsp;&nbsp;}<br/><br/>]</ph-code>
+    <p>修改后的 <code>babel.config.js</code> 的完整的代码是类似于下面这样的：</p>
+    <ph-code>module.exports&nbsp;=&nbsp;{<br/><br/>&nbsp;&nbsp;presets:&nbsp;[<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;'@vue/app'<br/><br/>&nbsp;&nbsp;],<br/><br/>&nbsp;&nbsp;plugins:&nbsp;[<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;[<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'component',<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'libraryName':&nbsp;'phui',<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'styleLibraryName':&nbsp;'theme-default'<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;]<br/><br/>&nbsp;&nbsp;]<br/><br/>}</ph-code>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
 
 export default {
-  name: 'home',
-  components: {
-    HelloWorld
-  }
+  name: 'Home'
 }
 </script>
+
+<style lang="stylus">
+  .home-a
+    color #1E9FFF
+    &:hover
+      color green
+  .title
+    font-size 30px
+    text-align center
+    line-height 2
+  .sub-title
+    font-size 16px
+    padding 10px 0
+    text-align center
+  .note
+    background-color #455a64
+    padding 10px
+    color white
+</style>
