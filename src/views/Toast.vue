@@ -21,19 +21,39 @@
     </show-code>
     <h3>API</h3>
     <h4>Methods</h4>
-    <h5>this.$toast(message): Void</h5>
+    <h5>this.$toast(options): Void</h5>
     <p>显示一条 Toast 轻提示信息，提示信息会在 3000ms 后自动关闭</p>
     <ph-table>
       <template>
         <th>参数</th>
         <th>类型</th>
         <th>说明</th>
+        <th>默认值</th>
       </template>
       <template>
         <tr>
-          <td>message</td>
+          <td>options</td>
+          <td>String | Object</td>
+          <td>如果 options 的类型为 String，则把 options 作为提示信息的内容，如果为 Object 则为包含下列参数的对象</td>
+          <td>-</td>
+        </tr>
+        <tr>
+          <td>options.message</td>
           <td>String</td>
           <td>提示信息内容</td>
+          <td>-</td>
+        </tr>
+        <tr>
+          <td>options.position</td>
+          <td>String</td>
+          <td>提示信息显示的垂直位置，可选值有：'top'、'middle', 'bottom'</td>
+          <td>'middle'</td>
+        </tr>
+        <tr>
+          <td>options.className</td>
+          <td>String</td>
+          <td>Toast 的类名。可以为其添加样式，多个样式之间用空格分隔</td>
+          <td>-</td>
         </tr>
       </template>
     </ph-table>
