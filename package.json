@@ -1,20 +1,22 @@
 {
   "name": "phui",
-  "version": "0.0.3",
+  "version": "0.0.9",
   "description": "Lightweight Mobile UI Components built on Vue",
   "main": "index.js",
   "repository": "git@github.com:DvShu/phui.git",
   "author": "DvShu <1joelshu@gmail.com>",
   "license": "MIT",
+  "keywords": [
+    "javascript",
+    "vue",
+    "ui",
+    "phui"
+  ],
+  "homepage": "https://dvshu.github.io/phui/#/",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
-  },
-  "dependencies": {
-    "highlight.js": "^9.15.5",
-    "vue": "^2.6.6",
-    "vue-router": "^3.0.1"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.4.0",
@@ -24,8 +26,11 @@
     "babel-eslint": "^10.0.1",
     "eslint": "^5.8.0",
     "eslint-plugin-vue": "^5.0.0",
+    "highlight.js": "^9.15.5",
     "stylus": "^0.54.5",
     "stylus-loader": "^3.0.2",
+    "vue": "^2.6.6",
+    "vue-router": "^3.0.1",
     "vue-template-compiler": "^2.5.21"
   },
   "files": [

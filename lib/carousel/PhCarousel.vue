@@ -92,10 +92,25 @@ export default {
       setInterval(() => {
         this.next()
       }, 3000)
-    },
-    n () {
-      this.next()
     }
   }
 }
 </script>
+
+<style>
+  .ph-carousel {
+    overflow-x: hidden;
+    position: relative;
+  }
+  .ph-carousel-item {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform: translateX(0);
+    display: none;
+  }
+  .ph-carousel-active {
+    display: block;
+    transform: none;
+  }
+</style>

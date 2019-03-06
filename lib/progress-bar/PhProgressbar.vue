@@ -103,3 +103,18 @@ export default {
   }
 }
 </script>
+
+<style>
+  .ph-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    width: 0;
+    transition: width 0.2s, opacity 0.4s;
+    opacity: 1;
+    background-color: #009688;
+    z-index: 999999;
+  }
+</style>

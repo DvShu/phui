@@ -5716,6 +5716,11 @@ performance-now@^2.1.0:
   resolved "http://registry.npm.taobao.org/performance-now/download/performance-now-2.1.0.tgz#6309f4e0e5fa913ec1c69307ae364b4b377c9e7b"
   integrity sha1-Ywn04OX6kT7BxpMHrjZLSzd8nns=
 
+phui@0.0.5:
+  version "0.0.5"
+  resolved "https://registry.yarnpkg.com/phui/-/phui-0.0.5.tgz#4e54fe357cc1e8a3f3e9d51d17b3318e1574d90f"
+  integrity sha512-Hs6lz0MWL+GaK+K0HCm82i58kAE7797WEsqWOeWNyeHrW3p4PEKNfwJR38pbIb+l53/B3+IR71Cw1FXczrKCVw==
+
 pify@^2.0.0:
   version "2.3.0"
   resolved "http://registry.npm.taobao.org/pify/download/pify-2.3.0.tgz#ed141a6ac043a849ea588498e7dca8b15330e90c"
