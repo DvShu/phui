@@ -8,7 +8,7 @@
     <h4>2. <code>Vue</code> 是通过 ES Module 的方式引入，例如：</h4>
     <ph-code>import&nbsp;Vue&nbsp;from&nbsp;'vue'</ph-code>
     <p>在 <code>main.js</code>中添加以下代码：</p>
-    <ph-code>import { Toast } from&nbsp;'phui'<br/><br/>Vue.use(Toast);</ph-code>
+    <ph-code>import { Toast } from 'phui'<br/><br/>/* 1. 全局使用[推荐的使用方式] */<br/>Vue.prototype.$toast = Toast<br/><br/>/* 2. 局部使用 */<br/>export default {<br/>  name: 'TestProgress',<br/>  methods: {<br/>    toast () {<br/>      Toast('')<br/>    }<br/>  },<br/>  destroyed () { /* 这里注意添加 */<br/>    Toast.destroy()<br/>  }<br/>}</ph-code>
     <h3>代码演示</h3>
     <show-code>
       <template>

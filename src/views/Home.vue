@@ -41,6 +41,7 @@
         <li>&emsp;1.&nbsp;当前功能都只是平时需要的功能，没有做更多的扩展，后续需要会根据需求进行相应的扩展。</li>
         <li>&emsp;2.&nbsp;所有的代码都是没有经过 <code>babel</code> 编译的，需要在最终 <code>build</code> 的时候进行统一编译。</li>
         <li>&emsp;3.&nbsp;需要借助 <code>babel-plugin-component</code> 实现按需引入。</li>
+        <li>&emsp;4.&nbsp;通过按需引入后，默认包含一些基本的样式重置</li>
       </ol>
     </div>
     <h3>安装</h3>

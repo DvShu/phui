@@ -1,0 +1,13 @@
+/**
+ * 一些常用的通用的样式整理
+ * Created by DvShu on 2019/3/21 16:53.
+ */
+
+/**
+ * 统一用双线显示人民币符号「&yen;(￥)」
+ */
+.phui-rmb,
+.phui-yuan {
+  font-family: arial;
+  font-style: normal;
+}

@@ -1,0 +1,32 @@
+/**
+ * 按钮样式
+ * Created by DvShu on 2019/3/21 16:55.
+ */
+
+.phui-btn {
+  outline: none;
+  padding: 12px 20px;
+  text-align: center;
+  border-radius: 3px;
+  color: #333;
+  background-color: white;
+  border: 1px solid #dcdfe6;
+  box-sizing: border-box;
+  line-height: 1;
+}
+.phui-btn-primary {
+  border-color: #409eff;
+  color: white;
+  background-color: #409eff;
+}
+.phui-btn:active {
+  border-color: #409eff;
+}
+.phui-btn-primary:active {
+  background-color: #3096ff;
+  border-color: #3096ff;
+}
+.phui-btn-block {
+  width: 100%;
+  padding: 12px 0;
+}

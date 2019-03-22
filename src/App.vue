@@ -7,6 +7,15 @@
           <router-link to="/" class="aside-link" exact>介绍</router-link>
         </li>
         <li>
+          <router-link to="/reset" class="aside-link" exact>重置样式</router-link>
+        </li>
+        <li>
+          <router-link to="/common" class="aside-link" exact>辅助</router-link>
+        </li>
+        <li>
+          <router-link to="/button" class="aside-link" exact>Button&nbsp;按钮</router-link>
+        </li>
+        <li>
           <router-link to="/progress_bar" class="aside-link" exact>ProgressBar&nbsp;页面加载进度条</router-link>
         </li>
         <li>
@@ -16,7 +25,13 @@
           <router-link to="/carousel" class="aside-link" exact>Carousel 轮播图</router-link>
         </li>
         <li>
+          <router-link to="/date_tool" class="aside-link" exact>DateTool 日期处理工具类</router-link>
+        </li>
+        <li>
           <router-link to="/date_picker" class="aside-link" exact>DatePicker 日期选择</router-link>
+        </li>
+        <li>
+          <router-link to="/validator" class="aside-link" exact>Validator 数据验证</router-link>
         </li>
       </ul>
     </div>

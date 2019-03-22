@@ -1,5 +1,6 @@
 import '../lib/theme-default/base.css'
 import 'highlight.js/styles/github-gist.css'
+import '../lib/theme-default/common.css'
 
 import Vue from 'vue'
 import App from './App.vue'
@@ -17,6 +18,7 @@ import html from 'highlight.js/lib/languages/xml'
 import css from 'highlight.js/lib/languages/css'
 
 require('./media.styl')
+require('../lib/theme-default/button.css')
 
 hljs.registerLanguage('javascript', javascript)
 hljs.registerLanguage('html', html)

@@ -11,7 +11,7 @@
 </template>
 
 <script>
-import utils from './utils'
+import utils from '../date-tool'
 
 /*
   移动端日期选择组件
