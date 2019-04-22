@@ -33,6 +33,9 @@
         <li>
           <router-link to="/validator" class="aside-link" exact>Validator 数据验证</router-link>
         </li>
+        <li>
+          <router-link to="/load_more" class="aside-link" exact>LoadMore 加载更多</router-link>
+        </li>
       </ul>
     </div>
     <div class="btn-phone-aside" v-if="mobile" @click="toggoleAside(true)">

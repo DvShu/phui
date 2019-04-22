@@ -11,6 +11,7 @@ import ShowCode from './components/ShowCode.vue'
 
 import Carousel from '../lib/carousel'
 import DatePicker from '../lib/date-picker'
+import LoadMore from '../lib/load-more'
 
 import hljs from 'highlight.js/lib/highlight'
 import javascript from 'highlight.js/lib/languages/javascript'
@@ -33,6 +34,7 @@ Vue.component('ShowCode', ShowCode)
 
 Vue.use(Carousel)
 Vue.use(DatePicker)
+Vue.use(LoadMore)
 
 new Vue({
   router,

@@ -10,6 +10,7 @@ import Common from './views/Common'
 import Button from './views/Button'
 import DateTool from './views/DateTool'
 import Validator from './views/Validator'
+import LoadMore from './views/LoadMore'
 
 Vue.use(Router)
 
@@ -61,6 +62,11 @@ export default new Router({
       path: '/validator',
       name: 'Validator',
       component: Validator
+    },
+    {
+      path: '/load_more',
+      name: 'LoadMore',
+      component: LoadMore
     }
   ]
 })

@@ -1,6 +1,6 @@
 {
   "name": "phui",
-  "version": "0.0.13",
+  "version": "0.0.14",
   "description": "Lightweight Mobile UI Components built on Vue",
   "main": "index.js",
   "repository": "git@github.com:DvShu/phui.git",
