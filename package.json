@@ -2,28 +2,29 @@
   "name": "phui",
   "version": "0.0.14",
   "description": "Lightweight Mobile UI Components built on Vue",
-  "main": "index.js",
-  "repository": "git@github.com:DvShu/phui.git",
   "author": "DvShu <1joelshu@gmail.com>",
-  "license": "MIT",
-  "keywords": [
-    "javascript",
-    "vue",
-    "ui",
-    "phui"
-  ],
-  "homepage": "https://dvshu.github.io/phui/#/",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "test:unit": "vue-cli-service test:unit"
   },
+  "main": "index.js",
+  "files": [
+    "lib",
+    "package.json",
+    "README.md",
+    "LICENSE"
+  ],
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.4.0",
     "@vue/cli-plugin-eslint": "^3.4.0",
+    "@vue/cli-plugin-unit-mocha": "^3.7.0",
     "@vue/cli-service": "^3.4.0",
     "@vue/eslint-config-standard": "^4.0.0",
+    "@vue/test-utils": "1.0.0-beta.29",
     "babel-eslint": "^10.0.1",
+    "chai": "^4.1.2",
     "eslint": "^5.8.0",
     "eslint-plugin-vue": "^5.0.0",
     "highlight.js": "^9.15.5",
@@ -33,10 +34,13 @@
     "vue-router": "^3.0.1",
     "vue-template-compiler": "^2.5.21"
   },
-  "files": [
-    "lib",
-    "package.json",
-    "README.md",
-    "LICENSE"
-  ]
+  "homepage": "https://dvshu.github.io/phui/#/",
+  "keywords": [
+    "javascript",
+    "vue",
+    "ui",
+    "phui"
+  ],
+  "license": "MIT",
+  "repository": "git@github.com:DvShu/phui.git"
 }
