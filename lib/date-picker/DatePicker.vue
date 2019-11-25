@@ -22,7 +22,7 @@ import utils from '../date-tool'
     />
  */
 export default {
-  name: 'PhDatePicker',
+  name: 'DatePicker',
   props: {
     value: { // 实际显示的日期字符串
       type: Date,

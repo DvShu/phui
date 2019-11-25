@@ -40,17 +40,18 @@
       <ol>
         <li>&emsp;1.&nbsp;当前功能都只是平时需要的功能，没有做更多的扩展，后续需要会根据需求进行相应的扩展。</li>
         <li>&emsp;2.&nbsp;所有的代码都是没有经过 <code>babel</code> 编译的，需要在最终 <code>build</code> 的时候进行统一编译。</li>
-        <li>&emsp;3.&nbsp;需要借助 <code>babel-plugin-component</code> 实现按需引入。</li>
-        <li>&emsp;4.&nbsp;通过按需引入后，默认包含一些基本的样式重置</li>
+        <li>&emsp;3.&nbsp;需要借助 <a href="https://github.com/ant-design/babel-plugin-import" class="home-a">babel-plugin-import</a> 实现按需引入。</li>
+        <li>&emsp;4.&nbsp;整个模块的样式使用 `stylus` 作为样式开发，所以需要配置 `stylus` 使用</li>
+        <li>&emsp;5.&nbsp;如果需要引入全局样式，则需要单独再 `App.vue` 中 `style` 的开始位置 `@import 'phui/lib/style/index.styl'`来单独引入 </li>
       </ol>
     </div>
     <h3>安装</h3>
-    <pre><code class="lang-javascript">yarn add phui babel-plugin-component</code></pre>
+    <pre><code class="lang-javascript">yarn add phui babel-plugin-import</code></pre>
     <h3>配置按需引入</h3>
     <p>修改 <code>babel.config.js</code> ，添加 <code>plugins</code> </p>
-    <ph-code>[<br/>  'component',<br/>  {<br/>    'libraryName': 'phui',<br/>    'styleLibraryName': 'theme-default'<br/>  }<br/>]</ph-code>
+    <ph-code>[<br/>  'import',<br/>  {<br/>    'libraryName': 'phui',<br/>    'style': false<br/>  }<br/>]</ph-code>
     <p>修改后的 <code>babel.config.js</code> 的完整的代码是类似于下面这样的：</p>
-    <ph-code>module.exports = {<br/>  presets: [<br/>    '@vue/app'<br/>  ],<br/>  plugins: [<br/>    [<br/>      'component',<br/>      {<br/>        'libraryName': 'phui',<br/>        'styleLibraryName': 'theme-default'<br/>      }<br/>    ]<br/>  ]<br/>}</ph-code>
+    <ph-code>module.exports = {<br/>  presets: [<br/>    '@vue/app'<br/>  ],<br/>  plugins: [<br/>    [<br/>      'import',<br/>      {<br/>        'libraryName': 'phui',<br/>        'style': false<br/>      }<br/>    ]<br/>  ]<br/>}</ph-code>
   </div>
 </template>
 

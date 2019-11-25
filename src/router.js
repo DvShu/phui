@@ -6,11 +6,11 @@ import Toast from './views/Toast.vue'
 import Carousel from './views/Carousel.vue'
 import DatePicker from './views/DatePicker.vue'
 import Reset from './views/Reset'
-import Common from './views/Common'
 import Button from './views/Button'
 import DateTool from './views/DateTool'
 import Validator from './views/Validator'
 import LoadMore from './views/LoadMore'
+import GlobalStyle from './views/GlobalStyle'
 
 Vue.use(Router)
 
@@ -45,9 +45,9 @@ export default new Router({
       name: 'Reset',
       component: Reset
     }, {
-      path: '/common',
-      name: 'Common',
-      component: Common
+      path: '/global_style',
+      name: 'GlobalStyle',
+      component: GlobalStyle
     }, {
       path: '/button',
       name: 'Button',

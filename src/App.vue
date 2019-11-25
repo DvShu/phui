@@ -7,10 +7,10 @@
           <router-link to="/" class="aside-link" exact>介绍</router-link>
         </li>
         <li>
-          <router-link to="/reset" class="aside-link" exact>重置样式</router-link>
+          <router-link to="/global_style" class="aside-link" exact>全局样式</router-link>
         </li>
         <li>
-          <router-link to="/common" class="aside-link" exact>辅助</router-link>
+          <router-link to="/reset" class="aside-link" exact>重置样式</router-link>
         </li>
         <li>
           <router-link to="/button" class="aside-link" exact>Button&nbsp;按钮</router-link>
@@ -70,6 +70,7 @@ export default {
 </script>
 
 <style lang="stylus">
+  @import "../lib/style/index.styl"
   table
     background-color: #fafafa;
     th
@@ -82,6 +83,9 @@ export default {
     td
       font-size 13px
       color #333
+  .stress
+    font-weight bold
+    color blue
   #app
     height 100%
     overflow-y hidden

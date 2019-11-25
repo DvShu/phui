@@ -21,7 +21,7 @@
  *  <load-more :loading.sync="loading" :finished="finished" @loadmore="loadmore"></load-more>
  */
 export default {
-  name: 'LoadMore',
+  name: 'PhLoadMore',
   props: {
     loading: {
       type: Boolean,
@@ -34,8 +34,8 @@ export default {
   },
   mounted () {
     this.height = this.$el.getBoundingClientRect().height
-    this.scrollHeight = this.$el.scrollHeight
     this.$el.addEventListener('scroll', this.scroll)
+    this.loadMore()
   },
   methods: {
     scroll () {
@@ -45,12 +45,22 @@ export default {
       }
       if (this.finished || this.loading) return
       this.timer = setTimeout(() => {
-        let top = this.$el.scrollTop
-        if (this.scrollHeight - top - this.height <= 60) {
-          this.$emit('update:title', true)
-          this.$emit('loadmore')
-        }
+        this.loadMore()
       }, 100)
+    },
+    offset () {
+      return {
+        sHeight: this.$el.scrollHeight,
+        top: this.$el.scrollTop
+      }
+    },
+    loadMore () {
+      let scrollHeight = this.$el.scrollHeight
+      let top = this.$el.scrollTop
+      if (scrollHeight - top - this.height <= 60) {
+        this.$emit('update:title', true)
+        this.$emit('loadmore')
+      }
     }
   },
   destroyed () {
@@ -59,13 +69,16 @@ export default {
 }
 </script>
 
-<style lang="stylus">
-.load-more
-  height 100%
-  overflow-y auto
-.loadmore-bottom
-  padding 15px 0
-  text-align center
-.loadmore-text
-  font-size 12px
+<style>
+.load-more {
+  height: 100%;
+  overflow-y: auto;
+}
+.loadmore-bottom {
+  padding: 15px 0;
+  text-align: center;
+}
+.loadmore-text {
+  font-size: 12px;
+}
 </style>

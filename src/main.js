@@ -1,6 +1,4 @@
-import '../lib/theme-default/base.css'
 import 'highlight.js/styles/github-gist.css'
-import '../lib/theme-default/common.css'
 
 import Vue from 'vue'
 import App from './App.vue'
@@ -9,9 +7,9 @@ import PhCode from './components/PhCode.vue'
 import PhTable from './components/PhTable.vue'
 import ShowCode from './components/ShowCode.vue'
 
-import Carousel from '../lib/carousel'
-import DatePicker from '../lib/date-picker'
-import LoadMore from '../lib/load-more'
+// import Carousel from '../lib/carousel'
+import DatePicker from '../lib/date-picker/DatePicker'
+import LoadMore from '../lib/load-more/LoadMore'
 
 import hljs from 'highlight.js/lib/highlight'
 import javascript from 'highlight.js/lib/languages/javascript'
@@ -19,7 +17,6 @@ import html from 'highlight.js/lib/languages/xml'
 import css from 'highlight.js/lib/languages/css'
 
 require('./media.styl')
-require('../lib/theme-default/button.css')
 
 hljs.registerLanguage('javascript', javascript)
 hljs.registerLanguage('html', html)
@@ -32,9 +29,8 @@ Vue.component('PhCode', PhCode)
 Vue.component('PhTable', PhTable)
 Vue.component('ShowCode', ShowCode)
 
-Vue.use(Carousel)
-Vue.use(DatePicker)
-Vue.use(LoadMore)
+Vue.component('date-picker', DatePicker)
+Vue.component('load-more', LoadMore)
 
 new Vue({
   router,

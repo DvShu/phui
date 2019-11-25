@@ -1,7 +1,7 @@
 <template>
   <div
     class="ph-toast"
-    v-show="show"
+    v-show="visible"
     :class="customClass"
   >
     <span>{{ message }}</span>
@@ -23,16 +23,15 @@ export default {
     position: {
       type: String,
       default: 'middle'
-    }
-  },
-  data () {
-    return {
-      show: false
+    },
+    visible: {
+      type: Boolean,
+      default: false
     }
   },
   computed: {
     customClass () {
-      var classes = []
+      let classes = []
       switch (this.position) {
         case 'top':
           classes.push('ph-toast-top')
@@ -42,14 +41,10 @@ export default {
           break
         default:
           classes.push('ph-toast-middle')
+          break
       }
       classes.push(this.className)
       return classes.join(' ')
-    }
-  },
-  methods: {
-    toggle () {
-      this.show = !this.show
     }
   }
 }
@@ -59,7 +54,7 @@ export default {
   .ph-toast {
     position: fixed;
     border-radius: 5px;
-    background: rgba(0, 0, 0, .7);
+    background: rgba(107, 107, 107, .8);
     color: #fff;
     text-align: center;
     z-index: 100;
@@ -83,5 +78,11 @@ export default {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+  }
+  .ph-toast_success {
+    color: #07c160;
+  }
+  .ph-toast_fail {
+    color: #f44;
   }
 </style>

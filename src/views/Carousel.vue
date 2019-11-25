@@ -6,11 +6,6 @@
     <h3>代码演示</h3>
     <show-code>
       <template>
-        <ph-carousel class="carousel">
-          <ph-carousel-item class="carousel-item1">1</ph-carousel-item>
-          <ph-carousel-item class="carousel-item2">2</ph-carousel-item>
-          <ph-carousel-item class="carousel-item3">3</ph-carousel-item>
-        </ph-carousel>
       </template>
       <template v-slot:code>
         <ph-code>&lt;template&gt;<br/>  &lt;ph-carousel class="carousel"&gt;<br/>    &lt;ph-carousel-item class="carousel-item1"&gt;1&lt;/ph-carousel-item&gt;<br/>    &lt;ph-carousel-item class="carousel-item2"&gt;2&lt;/ph-carousel-item&gt;<br/>    &lt;ph-carousel-item class="carousel-item3"&gt;3&lt;/ph-carousel-item&gt;<br/>  &lt;/ph-carousel&gt;<br/>&lt;/template&gt;<br/><br/>&lt;script&gt;<br/>export default {<br/>  name: 'Carousel'<br/>}<br/>&lt;/script&gt;<br/><br/>&lt;style lang="stylus"&gt;<br/>  .carousel<br/>    height 150px<br/>  .carousel-item1, .carousel-item2, .carousel-item3<br/>    color white<br/>    font-size 16px<br/>    text-align center<br/>  .carousel-item1<br/>    background-color #1E9FFF<br/>  .carousel-item2<br/>    background-color #009688<br/>  .carousel-item3<br/>    background-color rebeccapurple<br/>&lt;/style&gt;</ph-code>
