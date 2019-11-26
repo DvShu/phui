@@ -59,25 +59,33 @@
 // @ is an alias to /src
 
 export default {
-  name: 'Home'
+  name: 'Home',
+  mounted () {
+    this.$message.info('成功')
+  }
 }
 </script>
 
-<style lang="stylus">
-  .home-a
-    color #1E9FFF
-    &:hover
-      color green
-  .title
-    font-size 30px
-    text-align center
-    line-height 2
-  .sub-title
-    font-size 16px
-    padding 10px 0
-    text-align center
-  .note
-    background-color #455a64
-    padding 10px
-    color white
+<style lang="less">
+  .home-a {
+    color: #1E9FFF;
+    &:hover {
+      color: green;
+    }
+  }
+  .title {
+    font-size: 30px;
+    text-align: center;
+    line-height: 2;
+  }
+  .sub-title {
+    font-size: 16px;
+    padding: 10px 0;
+    text-align: center;
+  }
+  .note {
+    background-color: #455a64;
+    padding: 10px;
+    color: white;
+  }
 </style>

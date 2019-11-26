@@ -10,6 +10,7 @@ import ShowCode from './components/ShowCode.vue'
 // import Carousel from '../lib/carousel'
 import DatePicker from '../lib/date-picker/DatePicker'
 import LoadMore from '../lib/load-more/LoadMore'
+import Message from '../lib/message'
 
 import hljs from 'highlight.js/lib/highlight'
 import javascript from 'highlight.js/lib/languages/javascript'
@@ -24,6 +25,8 @@ hljs.registerLanguage('css', css)
 
 Vue.config.productionTip = false
 
+Message.customClass('message-tip')
+Vue.prototype.$message = Message
 // Vue.use(ProgressBar)
 Vue.component('PhCode', PhCode)
 Vue.component('PhTable', PhTable)

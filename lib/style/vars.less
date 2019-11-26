@@ -1,0 +1,34 @@
+// 定义按钮背景颜色以及悬浮点击效果态
+.btn(@bgColor: #5092B4) {
+  background-color: @bgColor;
+
+  &:hover {
+    background-color: darken(@bgColor, 5%)
+  }
+
+  &:active {
+    background-color: darken(@bgColor, 10%)
+  }
+}
+
+// 生成 css animation
+.defKeyframes (@name, @content) {
+  @keyframes @name {
+    @content();
+  }
+}
+.mozKeyframes (@name, @content) {
+  @-moz-keyframes @name {
+    @content();
+  }
+}
+.webkitKeyframes (@name, @content) {
+  @-webkit-keyframes @name {
+    @content();
+  }
+}
+.keyframes (@name, @content) {
+  .defKeyframes(@name, @content);
+  .mozKeyframes(@name, @content);
+  .webkitKeyframes(@name, @content);
+}

@@ -69,47 +69,60 @@ export default {
 }
 </script>
 
-<style lang="stylus">
-  @import "../lib/style/index.styl"
-  table
+<style lang="less">
+  @import "../lib/style/index.less";
+  .message-tip {
+    background-color: white;
+  }
+  table {
     background-color: #fafafa;
-    th
-      text-align left
-      font-weight 400
-      background-color #f0f0f0
-      color #666
-    th, td
-      padding 15px
-    td
-      font-size 13px
-      color #333
-  .stress
-    font-weight bold
-    color blue
-  #app
-    height 100%
-    overflow-y hidden
-    display flex
-  .doc-aside
-    width 300px
-    border-right 1px solid #dedede
-    height 100%
-    background-color #f9fafb;
-    color #4c555a;
-  .aside-link
-    display inline-block
-    width 100%
-    padding 5px 10px
-    font-size 16px
-  .router-link-active
-    color #1E9FFF
-  .doc-content
-    flex-grow 1
-    height 100%
-    padding 10px
-    overflow-y auto
-  .btn-phone-aside
-    position fixed
+    th {
+      text-align: left;
+      font-weight: 400;
+      background-color: #f0f0f0;
+      color: #666;
+    }
+    th, td {
+      padding: 15px;
+    }
+    td {
+      font-size: 13px;
+      color: #333;
+    }
+  }
+  .stress {
+    font-weight: bol;
+    color: blue;
+  }
+  #app {
+    height: 100%;
+    overflow-y: hidden;
+    display: flex;
+  }
+  .doc-aside {
+    width: 300px;
+    border-right: 1px solid #dedede;
+    height: 100%;
+    background-color: #f9fafb;
+    color: #4c555a;
+  }
+  .aside-link {
+    display: inline-block;
+    width: 100%;
+    padding: 5px 10px;
+    font-size: 16px;
+  }
+  .router-link-active {
+    color: #1E9FFF;
+  }
+  .doc-content {
+    flex-grow: 1;
+    height: 100%;
+    padding: 10px;
+    overflow-y: auto;
+  }
+  .btn-phone-aside {
+    position: fixed;
     bottom: 15px;
     left: 15px;
     width: 50px;
@@ -119,12 +132,13 @@ export default {
     text-align: center;
     background-color: rgba(0,0,0,.7);
     color: #fff;
-    z-index 100
-  pre
+    z-index: 100;
+  }
+  pre {
     padding: 10px;
     box-sizing: border-box;
     background-color: #f2f4f5;
-    code
+    code {
       border: 0;
       display: block;
       max-width: none;
@@ -134,5 +148,7 @@ export default {
       font-size: 13px;
       white-space: pre;
       background: 0 0;
-      line-height 1.5
+      line-height: 1.5;
+    }
+  }
 </style>

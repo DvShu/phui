@@ -7,7 +7,7 @@
       <template>
         <br>
         <button class="phui-btn">默认按钮</button>&nbsp;
-        <button class="phui-btn phui-btn-primary">主要</button>
+        <button class="phui-btn phui-btn-primary">Primary</button>
         <br><br>
         <button class="phui-btn phui-btn-block">块按钮</button>
         <br><br>
@@ -25,7 +25,3 @@ export default {
   name: 'Button'
 }
 </script>
-
-<style lang="stylus">
-
-</style>

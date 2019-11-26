@@ -1,0 +1,68 @@
+@import "../style/icon.less";
+
+@keyframes messageEnter {
+  from {
+    margin-top: 0;
+    opacity: 0;
+  }
+  to {
+    margin-top: 20px;
+    opacity: 1;
+  }
+}
+@keyframes messageOut {
+  form {
+    margin-top: 20px;
+    opacity: 1;
+  }
+  to {
+    margin-top: -41px;
+    opacity: 0;
+  }
+}
+
+.phui-message-group {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  width: 100%;
+
+  .phui-message {
+    padding: 0 10px;
+    margin: 20px auto 0 auto;
+    width: 25%;
+    height: 40px;
+    line-height: 40px;
+    border: 1px solid #ebeef5;
+    font-size: 14px;
+    color: #ebeef5;
+    border-radius: 5px;
+    height: auto;
+    animation: messageEnter 0.5s infinite;
+    animation-iteration-count: 1;
+  }
+  // 成功提示
+  .phui-message_success {
+    border-color: #67c23a;
+    color: #67c23a;
+  }
+  // 警告提示
+  .phui-message_warn {
+    color: #e6a23c;
+    border-color: #e6a23c;
+  }
+  // 错误提示
+  .phui-message_error {
+    color: #f56c6c;
+    border-color: #f56c6c;
+  }
+
+  .phui-message_leave_anim {
+    animation: messageOut 0.5s infinite;
+    animation-iteration-count: 1;
+  }
+
+  .phui-message_content {
+    margin-left: 10px;
+  }
+}
