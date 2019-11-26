@@ -1,16 +1,9 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Home from './views/Home.vue'
-import ProgressBar from './views/ProgressBar.vue'
-import Toast from './views/Toast.vue'
-import Carousel from './views/Carousel.vue'
-import DatePicker from './views/DatePicker.vue'
-import Reset from './views/Reset'
-import Button from './views/Button'
-import DateTool from './views/DateTool'
-import Validator from './views/Validator'
-import LoadMore from './views/LoadMore'
-import GlobalStyle from './views/GlobalStyle'
+import Button from './views/Button.vue'
+import Icon from './views/Icon.vue'
+import Message from './views/Message.vue'
 
 Vue.use(Router)
 
@@ -22,51 +15,19 @@ export default new Router({
       component: Home
     },
     {
-      path: '/progress_bar',
-      name: 'ProgressBar',
-      component: ProgressBar
-    },
-    {
-      path: '/toast',
-      name: 'Toast',
-      component: Toast
-    },
-    {
-      path: '/carousel',
-      name: 'Carousel',
-      component: Carousel
-    },
-    {
-      path: '/date_picker',
-      name: 'DatePicker',
-      component: DatePicker
-    }, {
-      path: '/reset',
-      name: 'Reset',
-      component: Reset
-    }, {
-      path: '/global_style',
-      name: 'GlobalStyle',
-      component: GlobalStyle
-    }, {
       path: '/button',
       name: 'Button',
       component: Button
     },
     {
-      path: '/date_tool',
-      name: 'DateTool',
-      component: DateTool
+      path: '/icon',
+      name: 'Icon',
+      component: Icon
     },
     {
-      path: '/validator',
-      name: 'Validator',
-      component: Validator
-    },
-    {
-      path: '/load_more',
-      name: 'LoadMore',
-      component: LoadMore
+      path: '/message',
+      name: 'Message',
+      component: Message
     }
   ]
 })
