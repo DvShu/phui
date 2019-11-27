@@ -4,6 +4,8 @@ import Home from './views/Home.vue'
 import Button from './views/Button.vue'
 import Icon from './views/Icon.vue'
 import Message from './views/Message.vue'
+import DatePicker from './views/DatePicker.vue'
+import Toast from './views/Toast.vue'
 
 Vue.use(Router)
 
@@ -28,6 +30,16 @@ export default new Router({
       path: '/message',
       name: 'Message',
       component: Message
+    },
+    {
+      path: '/datepicker',
+      name: 'DatePicker',
+      component: DatePicker
+    },
+    {
+      path: '/toast',
+      name: 'Toast',
+      component: Toast
     }
   ]
 })

@@ -3,6 +3,8 @@
     <a href="#" class="menu-item" @click.prevent="$router.push('/button')">Button 按钮</a>
     <a href="#" class="menu-item" @click.prevent="$router.push('/icon')">Icon 图标</a>
     <a href="#" class="menu-item" @click.prevent="$router.push('/message')">Message 消息提示</a>
+    <a href="#" class="menu-item" @click.prevent="$router.push('/datepicker')">DatePicker 日期选择</a>
+    <a href="#" class="menu-item" @click.prevent="$router.push('/toast')">Toast 轻提示</a>
   </div>
 </template>
 
@@ -13,6 +15,7 @@ export default {
 </script>
 
 <style lang="less">
+
 .home {
   .menu-item {
     display: inline-block;

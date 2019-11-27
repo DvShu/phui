@@ -38,6 +38,7 @@ export default {
     this.loadMore()
   },
   methods: {
+    // 滑动事件
     scroll () {
       if (this.timer) {
         clearTimeout(this.timer)
@@ -65,6 +66,7 @@ export default {
   },
   destroyed () {
     this.$el.removeEventListener('scroll', this.scroll)
+    clearTimeout(this.timer) // 清楚定时器
   }
 }
 </script>

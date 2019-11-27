@@ -2,7 +2,7 @@
   <label
     class="ph-date-picker"
   >
-    {{ showDate }}
+    <span>{{ showDate }}</span>
     <input
       type="date"
       v-model="selectDate"
@@ -14,7 +14,7 @@
 import utils from '../date-tool'
 
 /*
-  移动端日期选择组件
+  移动端日期选择组件 date datetime-local
   <date-picker
       v-model="date"
       value-format="yyyy/mm/dd" // 日期显示格式
@@ -22,11 +22,13 @@ import utils from '../date-tool'
     />
  */
 export default {
-  name: 'DatePicker',
+  name: 'PhDatePicker',
   props: {
     value: { // 实际显示的日期字符串
-      type: Date,
-      default: ''
+      type: [Date, String, Number],
+      default: function () {
+        return new Date()
+      }
     },
     valueFormat: { // 日期显示的格式
       type: String,
@@ -40,29 +42,28 @@ export default {
   data () {
     return {
       showDate: '',
-      selectDate: '', // 选择的日期字符串
-      date: null // 根据选中的日期解析后的 Date 对象
+      selectDate: '' // 选择的日期字符串
     }
   },
   created () {
     // 初始化日期, 优先级 defaultValue > value > 默认：当前时间
     let d = this.defaultValue || this.value
-    this.date = utils.parse(d === '' ? null : d)
-    this.selectDate = utils.format(this.date, 'yyyy/mm/dd')
-    this.showDate = utils.format(this.date, this.valueFormat)
-    this.$emit('input', this.date)
+    let date = utils.parse(d === '' ? null : d)
+    this.selectDate = utils.format(date, 'yyyy/mm/dd')
+    this.showDate = utils.format(date, this.valueFormat)
+    this.$emit('input', date)
   },
   watch: {
     selectDate (v) {
-      this.date = utils.parse(v === '' ? null : v)
-      this.showDate = utils.format(this.date, this.valueFormat)
-      this.$emit('input', this.date)
+      let date = utils.parse(v === '' ? null : v)
+      this.showDate = utils.format(date, this.valueFormat)
+      this.$emit('input', date)
     }
   }
 }
 </script>
 
-<style>
+<style lang="less">
   .ph-date-picker {
     display: inline-block;
     box-sizing: border-box;
@@ -78,9 +79,10 @@ export default {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-  }
-  .ph-date-picker input {
-    position: absolute;
-    left: -9999px;
+
+    input {
+      position: absolute;
+      left: -9999px;
+    }
   }
 </style>
