@@ -6,6 +6,7 @@ import Icon from './views/Icon.vue'
 import Message from './views/Message.vue'
 import DatePicker from './views/DatePicker.vue'
 import Toast from './views/Toast.vue'
+import List from './views/List.vue'
 
 Vue.use(Router)
 
@@ -40,6 +41,11 @@ export default new Router({
       path: '/toast',
       name: 'Toast',
       component: Toast
+    },
+    {
+      path: '/list',
+      name: 'List',
+      component: List
     }
   ]
 })

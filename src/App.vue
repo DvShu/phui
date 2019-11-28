@@ -23,6 +23,7 @@ export default {
 
   .sub-page {
     overflow-y: hidden;
+    height: 100%;
   }
 
   .doc-container {

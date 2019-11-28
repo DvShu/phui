@@ -4,9 +4,9 @@ import router from './router'
 
 import Header from './components/Header.vue'
 import DatePicker from '../lib/date-picker'
-import LoadMore from '../lib/load-more/LoadMore'
 import Message from '../lib/message'
 import Toast from '../lib/toast'
+import List from '../lib/list'
 
 Vue.config.productionTip = false
 
@@ -15,7 +15,7 @@ Vue.prototype.$message = Message
 Vue.prototype.$toast = Toast
 
 Vue.component('ph-date-picker', DatePicker)
-Vue.component('load-more', LoadMore)
+Vue.component('ph-list', List)
 Vue.component('app-header', Header)
 
 new Vue({

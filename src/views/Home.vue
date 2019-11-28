@@ -5,6 +5,7 @@
     <a href="#" class="menu-item" @click.prevent="$router.push('/message')">Message 消息提示</a>
     <a href="#" class="menu-item" @click.prevent="$router.push('/datepicker')">DatePicker 日期选择</a>
     <a href="#" class="menu-item" @click.prevent="$router.push('/toast')">Toast 轻提示</a>
+    <a href="#" class="menu-item" @click.prevent="$router.push('/list')">List 列表</a>
   </div>
 </template>
 

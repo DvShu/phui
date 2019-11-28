@@ -1,7 +1,7 @@
 {
   "name": "phui",
-  "version": "0.0.16",
-  "description": "Lightweight Mobile UI Components built on Vue",
+  "version": "1.0.0",
+  "description": "Lightweight UI Components built on Vue",
   "author": "DvShu <1joelshu@gmail.com>",
   "scripts": {
     "serve": "vue-cli-service serve",

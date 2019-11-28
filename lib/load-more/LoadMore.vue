@@ -32,41 +32,42 @@ export default {
       default: false
     }
   },
+  data () {
+    return {
+      scollTimer: -1
+    }
+  },
   mounted () {
-    this.height = this.$el.getBoundingClientRect().height
+    // 监听滑动事件
     this.$el.addEventListener('scroll', this.scroll)
-    this.loadMore()
+    this.loadMore() // 初始的时候，触发一次加载更多
   },
   methods: {
     // 滑动事件
     scroll () {
-      if (this.timer) {
-        clearTimeout(this.timer)
-        this.timer = undefined
-      }
+      clearTimeout(this.scollTimer)
       if (this.finished || this.loading) return
-      this.timer = setTimeout(() => {
-        this.loadMore()
+      this.scollTimer = setTimeout(() => {
+        this.loadMore() // 加载更多
       }, 100)
     },
-    offset () {
-      return {
-        sHeight: this.$el.scrollHeight,
-        top: this.$el.scrollTop
-      }
-    },
     loadMore () {
+      // 滚动所在容器的可视高度
+      let height = this.$el.getBoundingClientRect().height
+      // 滚动所在容器的实际高度
       let scrollHeight = this.$el.scrollHeight
+      // 滚动距离
       let top = this.$el.scrollTop
-      if (scrollHeight - top - this.height <= 60) {
-        this.$emit('update:title', true)
+      // 临界点
+      if (scrollHeight - top - height <= 60) {
+        this.$emit('update:loading', true)
         this.$emit('loadmore')
       }
     }
   },
   destroyed () {
     this.$el.removeEventListener('scroll', this.scroll)
-    clearTimeout(this.timer) // 清楚定时器
+    clearTimeout(this.scollTimer) // 清楚定时器
   }
 }
 </script>
