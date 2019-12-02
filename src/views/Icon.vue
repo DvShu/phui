@@ -5,25 +5,25 @@
       <ul class="icon-list">
         <li>
           <div class="icon-wrapper">
-            <i class="phui-icon phui-icon-info"></i>
+            <i class="ph-icon ph-icon-info"></i>
           </div>
           <div class="icon-class">phui-icon-info</div>
         </li>
         <li>
           <div class="icon-wrapper">
-            <i class="phui-icon phui-icon-warn"></i>
+            <i class="ph-icon ph-icon-warn"></i>
           </div>
           <div class="icon-class">phui-icon-warn</div>
         </li>
         <li>
           <div class="icon-wrapper">
-            <i class="phui-icon phui-icon-error"></i>
+            <i class="ph-icon ph-icon-error"></i>
           </div>
           <div class="icon-class">phui-icon-error</div>
         </li>
         <li>
           <div class="icon-wrapper">
-            <i class="phui-icon phui-icon-success"></i>
+            <i class="ph-icon ph-icon-success"></i>
           </div>
           <div class="icon-class">phui-icon-success</div>
         </li>
