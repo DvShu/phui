@@ -2,6 +2,7 @@
   <div class="ph-list">
     <slot />
     <div class="ph-list-bottom" >
+      <i class="ph-icon ph-icon-loading" v-if="finished === false"></i>
       <span class="ph-list-more">{{ finished ? '没有更多了' : '加载中……' }}</span>
     </div>
   </div>
@@ -13,7 +14,7 @@
  * :finished=true|false 是否加载完所有的数据
  * @loadmore='fn' 如果需要加载更多数据时的调用函数
  * 例：
- *  <load-more :loading.sync="loading" :finished="finished" @loadmore="loadmore"></load-more>
+ *  <load-more :loading.sync="loading" :finished="finished" @load="loadmore"></load-more>
  */
 export default {
   name: 'PhList',
@@ -67,7 +68,7 @@ export default {
         if (scrollHeight - height - top <= 60) { // 加载更多
           if (this.finished || this.loading) return
           this.$emit('update:loading', true)
-          this.$emit('loadmore')
+          this.$emit('load')
         }
       }, 100)
     },
@@ -99,6 +100,15 @@ export default {
 </script>
 
 <style lang="less">
+@keyframes phui-rotate {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 .ph-list {
   height: 100%;
   overflow-y: auto;
@@ -108,6 +118,15 @@ export default {
   }
   .ph-list-more {
     font-size: 12px;
+    vertical-align: middle;
+    margin-left: 10px;
+  }
+  .ph-icon-loading {
+    font-size: 20px;
+    display: inline-block;
+    vertical-align: middle;
+    animation: phui-rotate 1s linear infinite;
   }
 }
+
 </style>

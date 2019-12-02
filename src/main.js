@@ -7,6 +7,7 @@ import DatePicker from '../lib/date-picker'
 import Message from '../lib/message'
 import Toast from '../lib/toast'
 import List from '../lib/list'
+import Input from '../lib/input'
 
 Vue.config.productionTip = false
 
@@ -17,6 +18,7 @@ Vue.prototype.$toast = Toast
 Vue.component('ph-date-picker', DatePicker)
 Vue.component('ph-list', List)
 Vue.component('app-header', Header)
+Vue.component('ph-input', Input)
 
 new Vue({
   router,

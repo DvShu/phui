@@ -7,6 +7,7 @@ import Message from './views/Message.vue'
 import DatePicker from './views/DatePicker.vue'
 import Toast from './views/Toast.vue'
 import List from './views/List.vue'
+import Input from './views/Input.vue'
 
 Vue.use(Router)
 
@@ -46,6 +47,11 @@ export default new Router({
       path: '/list',
       name: 'List',
       component: List
+    },
+    {
+      path: '/input',
+      name: 'Input',
+      component: Input
     }
   ]
 })

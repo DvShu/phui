@@ -2,8 +2,19 @@
   <div class="sub-page list">
     <app-header title="List"></app-header>
     <div class="doc-container list-container">
-      <ph-list :loading.sync="loading" :finished="finished" @loadmore="loadmore" :isLazyimg="true">
-        <img v-for="(url, i) in imgs" :key="i" :lazy-src="url" class="demo-img" :id="'id' + i">
+      <ph-list
+        :loading.sync="loading"
+        :finished="finished"
+        @load="loadmore"
+        :isLazyimg="true"
+      >
+        <img
+          v-for="(url, i) in imgs"
+          :key="i"
+          :lazy-src="url"
+          class="demo-img"
+          :id="'id' + i"
+        >
       </ph-list>
     </div>
   </div>
