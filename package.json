@@ -1,6 +1,6 @@
 {
   "name": "phui",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Lightweight UI Components built on Vue",
   "author": "DvShu <1joelshu@gmail.com>",
   "scripts": {
